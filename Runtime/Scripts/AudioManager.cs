@@ -25,7 +25,7 @@ namespace JSAM
                 else if (instance.gameObject.scene == null) missing = true;
                 if (missing)
                 {
-                    instance = FindObjectOfType<AudioManager>();
+                    instance = FindFirstObjectByType<AudioManager>();
                     if (instance == null)
                     {
                         if (!isQuitting && Application.isPlaying)
@@ -207,7 +207,7 @@ namespace JSAM
 
                     if (!success)
                     {
-                        var l = FindObjectOfType<AudioListener>();
+                        var l = FindFirstObjectByType<AudioListener>();
                         if (l)
                         {
                             listener = l;
